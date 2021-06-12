@@ -24,6 +24,12 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
@@ -53,6 +59,41 @@
     </Reference>
     <Reference Include="DocumentFormat.OpenXml">
       <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSSoft.STORMNET.Business.Audit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8b09038b5bd09732, processorArchitecture=MSIL">
+      <HintPath>..\packages\NewPlatform.Flexberry.Audit.4.0.0\lib\net45\ICSSoft.STORMNET.Business.Audit.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSSoft.STORMNET.Business.MSSQLDataService, Version=1.0.0.1, Culture=neutral, PublicKeyToken=49b42003269a4a66, processorArchitecture=MSIL">
+      <HintPath>..\packages\NewPlatform.Flexberry.ORM.MSSQLDataService.6.0.0\lib\net45\ICSSoft.STORMNET.Business.MSSQLDataService.dll</HintPath>
+    </Reference>
+    <Reference Include="IIS.Caseberry.Logging.BusinessServers, Version=1.0.0.1, Culture=neutral, PublicKeyToken=2064285e6f5eb4a5, processorArchitecture=MSIL">
+      <HintPath>..\packages\NewPlatform.Flexberry.LogService.Objects.4.0.0\lib\net45\IIS.Caseberry.Logging.BusinessServers.dll</HintPath>
+    </Reference>
+    <Reference Include="IIS.Caseberry.Logging.Objects, Version=1.0.0.1, Culture=neutral, PublicKeyToken=e89274d6fcfab3e9, processorArchitecture=MSIL">
+      <HintPath>..\packages\NewPlatform.Flexberry.LogService.Objects.4.0.0\lib\net45\IIS.Caseberry.Logging.Objects.dll</HintPath>
+    </Reference>
+    <Reference Include="NewPlatform.Flexberry.Caching, Version=1.0.0.0, Culture=neutral, PublicKeyToken=43b437d0302b56ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\NewPlatform.Flexberry.Caching.2.0.0\lib\net45\NewPlatform.Flexberry.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="NewPlatform.Flexberry.Security, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b04c483e14c0d306, processorArchitecture=MSIL">
+      <HintPath>..\packages\NewPlatform.Flexberry.Security.3.0.0\lib\net45\NewPlatform.Flexberry.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="NewPlatform.Flexberry.Security.AspNetProviders, Version=1.0.0.0, Culture=neutral, PublicKeyToken=80752be4cd4f3b93, processorArchitecture=MSIL">
+      <HintPath>..\packages\NewPlatform.Flexberry.Security.3.0.0\lib\net45\NewPlatform.Flexberry.Security.AspNetProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="NewPlatform.Flexberry.Security.BusinessServers, Version=1.0.0.1, Culture=neutral, PublicKeyToken=2a87ddf394e1b26a, processorArchitecture=MSIL">
+      <HintPath>..\packages\NewPlatform.Flexberry.Security.3.0.0\lib\net45\NewPlatform.Flexberry.Security.BusinessServers.dll</HintPath>
+    </Reference>
+    <Reference Include="NewPlatform.Flexberry.Security.Objects, Version=1.0.0.1, Culture=neutral, PublicKeyToken=e9e142aba0117561, processorArchitecture=MSIL">
+      <HintPath>..\packages\NewPlatform.Flexberry.Security.3.0.0\lib\net45\NewPlatform.Flexberry.Security.Objects.dll</HintPath>
+    </Reference>
+    <Reference Include="NewPlatform.Flexberry.UserSettingsService, Version=1.1.0.0, Culture=neutral, PublicKeyToken=2169f05da5d7fddc, processorArchitecture=MSIL">
+      <HintPath>..\packages\NewPlatform.Flexberry.UserSettingsService.4.0.0\lib\net45\NewPlatform.Flexberry.UserSettingsService.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
@@ -126,33 +167,6 @@
     <Reference Include="NewPlatform.Flexberry.ORM.UnityFactory">
       <HintPath>..\packages\NewPlatform.Flexberry.ORM.6.0.1-beta01\lib\net45\NewPlatform.Flexberry.ORM.UnityFactory.dll</HintPath>
     </Reference>
-    <Reference Include="NewPlatform.Flexberry.Caching">
-      <HintPath>..\packages\NewPlatform.Flexberry.Caching.2.0.0-beta03\lib\net45\NewPlatform.Flexberry.Caching.dll</HintPath>
-    </Reference>
-    <Reference Include="NewPlatform.Flexberry.Security.AspNetProviders">
-      <HintPath>..\packages\NewPlatform.Flexberry.Security.3.0.0-beta03\lib\net45\NewPlatform.Flexberry.Security.AspNetProviders.dll</HintPath>
-    </Reference>
-    <Reference Include="NewPlatform.Flexberry.Security.BusinessServers">
-      <HintPath>..\packages\NewPlatform.Flexberry.Security.3.0.0-beta03\lib\net45\NewPlatform.Flexberry.Security.BusinessServers.dll</HintPath>
-    </Reference>
-    <Reference Include="NewPlatform.Flexberry.Security">
-      <HintPath>..\packages\NewPlatform.Flexberry.Security.3.0.0-beta03\lib\net45\NewPlatform.Flexberry.Security.dll</HintPath>
-    </Reference>
-    <Reference Include="NewPlatform.Flexberry.Security.Objects">
-      <HintPath>..\packages\NewPlatform.Flexberry.Security.3.0.0-beta03\lib\net45\NewPlatform.Flexberry.Security.Objects.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSSoft.STORMNET.Business.Audit">
-      <HintPath>..\packages\NewPlatform.Flexberry.Audit.4.0.0-beta03\lib\net45\ICSSoft.STORMNET.Business.Audit.dll</HintPath>
-    </Reference>
-    <Reference Include="IIS.Caseberry.Logging.BusinessServers">
-      <HintPath>..\packages\NewPlatform.Flexberry.LogService.Objects.4.0.0-beta02\lib\net45\IIS.Caseberry.Logging.BusinessServers.dll</HintPath>
-    </Reference>
-    <Reference Include="IIS.Caseberry.Logging.Objects">
-      <HintPath>..\packages\NewPlatform.Flexberry.LogService.Objects.4.0.0-beta02\lib\net45\IIS.Caseberry.Logging.Objects.dll</HintPath>
-    </Reference>
-    <Reference Include="NewPlatform.Flexberry.UserSettingsService">
-      <HintPath>..\packages\NewPlatform.Flexberry.UserSettingsService.4.0.0-beta02\lib\net45\NewPlatform.Flexberry.UserSettingsService.dll</HintPath>
-    </Reference>
     <Reference Include="ExpressionBuilder">
       <HintPath>..\packages\NewPlatform.Flexberry.AspNet.4.0.0-alpha01\lib\net45\ExpressionBuilder.dll</HintPath>
     </Reference>
@@ -222,6 +236,7 @@
     <Content Include="forms\Person\PersonE.aspx" />
     <Compile Include="forms\Person\PersonE.aspx.cs">
       <DependentUpon>PersonE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="forms\Person\PersonE.aspx.designer.cs">
       <DependentUpon>PersonE.aspx</DependentUpon>
@@ -229,6 +244,7 @@
     <Content Include="forms\Notebook\NotebookL.aspx" />
     <Compile Include="forms\Notebook\NotebookL.aspx.cs">
       <DependentUpon>NotebookL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="forms\Notebook\NotebookL.aspx.designer.cs">
       <DependentUpon>NotebookL.aspx</DependentUpon>
@@ -237,6 +253,7 @@
     <Content Include="forms\Person\PersonL.aspx" />
     <Compile Include="forms\Person\PersonL.aspx.cs">
       <DependentUpon>PersonL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="forms\Person\PersonL.aspx.designer.cs">
       <DependentUpon>PersonL.aspx</DependentUpon>
@@ -244,6 +261,7 @@
     <Content Include="forms\Notebook\NotebookE.aspx" />
     <Compile Include="forms\Notebook\NotebookE.aspx.cs">
       <DependentUpon>NotebookE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="forms\Notebook\NotebookE.aspx.designer.cs">
       <DependentUpon>NotebookE.aspx</DependentUpon>
@@ -639,14 +657,17 @@
     <Compile Include="forms\BaseEditForm.cs">
       <DependentUpon>
       </DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="forms\BaseListForm.cs">
       <DependentUpon>
       </DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="forms\LookUpForm.cs">
       <DependentUpon>
       </DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="FormUtils.cs">
       <DependentUpon>
@@ -656,6 +677,7 @@
     <Content Include="Site1.Master" />
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
@@ -663,6 +685,7 @@
     <Content Include="Default.aspx" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -670,6 +693,7 @@
     <Content Include="ErrorForm.aspx" />
     <Compile Include="ErrorForm.aspx.cs">
       <DependentUpon>ErrorForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ErrorForm.aspx.designer.cs">
       <DependentUpon>ErrorForm.aspx</DependentUpon>
@@ -677,6 +701,7 @@
     <Content Include="Error404.aspx" />
     <Compile Include="Error404.aspx.cs">
       <DependentUpon>Error404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Error404.aspx.designer.cs">
       <DependentUpon>Error404.aspx</DependentUpon>
@@ -688,6 +713,7 @@
     <Content Include="LoginForm.aspx" />
     <Compile Include="LoginForm.aspx.cs">
       <DependentUpon>LoginForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="LoginForm.aspx.designer.cs">
       <DependentUpon>LoginForm.aspx</DependentUpon>
